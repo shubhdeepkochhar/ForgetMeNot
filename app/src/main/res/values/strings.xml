@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Forget Me Not</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="status_prompt">status</string>
+    <string-array name="status_list">
+        <item>Incomplete</item>
+        <item>Completed</item>
+    </string-array>
+
+    <string name="priority_prompt">status</string>
+    <string-array name="priority_list">
+        <item>low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+</resources>
