@@ -1,4 +1,4 @@
-package com.example.shubhdeepk.forgetmenot;
+package com.example.shubhdeepk.forgetmenot.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +10,11 @@ import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.shubhdeepk.forgetmenot.R;
+import com.example.shubhdeepk.forgetmenot.models.ToDoDbHandler;
+import com.example.shubhdeepk.forgetmenot.activities.MainActivity;
+import com.example.shubhdeepk.forgetmenot.activities.ViewToDoActivity;
 
 import java.util.ArrayList;
 

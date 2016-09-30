@@ -1,4 +1,4 @@
-package com.example.shubhdeepk.forgetmenot;
+package com.example.shubhdeepk.forgetmenot.activities;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -16,6 +16,9 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.shubhdeepk.forgetmenot.R;
+import com.example.shubhdeepk.forgetmenot.models.ToDoDbHandler;
 
 import java.util.ArrayList;
 import java.util.Arrays;

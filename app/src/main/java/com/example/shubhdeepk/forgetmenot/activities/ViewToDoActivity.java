@@ -1,4 +1,4 @@
-package com.example.shubhdeepk.forgetmenot;
+package com.example.shubhdeepk.forgetmenot.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.shubhdeepk.forgetmenot.R;
+import com.example.shubhdeepk.forgetmenot.models.ToDoDbHandler;
 
 import java.util.Arrays;
 
@@ -106,7 +109,7 @@ public class ViewToDoActivity extends AppCompatActivity {
                 //checkDeleteOnTask = Boolean.TRUE;
                 db.delete(name);
                 Intent resultIntent = new Intent();
-                setResult(MainActivity.RESULT_OK, resultIntent);
+                setResult(RESULT_OK, resultIntent);
                 finish();
                 return true;
             default:
