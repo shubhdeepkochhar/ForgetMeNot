@@ -1,4 +1,4 @@
-package com.example.shubhdeepk.forgetmenot;
+package com.example.shubhdeepk.forgetmenot.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
+
+import com.example.shubhdeepk.forgetmenot.adapters.CustomToDoAdapter;
+import com.example.shubhdeepk.forgetmenot.R;
+import com.example.shubhdeepk.forgetmenot.models.ToDoDbHandler;
 
 import static com.example.shubhdeepk.forgetmenot.R.id.addNewItem;
 
@@ -27,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setIcon(R.mipmap.forgetflower);
 
         fab = (FloatingActionButton) findViewById(addNewItem);
         fab.setOnClickListener(new View.OnClickListener() {

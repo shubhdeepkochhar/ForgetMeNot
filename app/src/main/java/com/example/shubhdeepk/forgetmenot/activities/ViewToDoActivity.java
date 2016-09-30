@@ -1,4 +1,4 @@
-package com.example.shubhdeepk.forgetmenot;
+package com.example.shubhdeepk.forgetmenot.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,9 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.shubhdeepk.forgetmenot.R;
+import com.example.shubhdeepk.forgetmenot.models.ToDoDbHandler;
 
 import java.util.Arrays;
 
@@ -18,8 +23,9 @@ public class ViewToDoActivity extends AppCompatActivity {
     ToDoDbHandler db;
 
     EditText editName, editDueDate, editNotes;
+    Button toDoSpeak, notesSpeak;
     Spinner spinnerPriority, spinnerStatus;
-    String name;
+    String name,type;
 
 
 
@@ -32,6 +38,13 @@ public class ViewToDoActivity extends AppCompatActivity {
 
         bundle = getIntent().getExtras();
         name = bundle.getString("NAME");
+        type = bundle.getString("TYPE");
+        setTitle(type);
+
+        getSupportActionBar().setLogo(R.mipmap.forgetflower);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
         db = new ToDoDbHandler(this);
 
         editName = (EditText) findViewById(R.id.editName);
@@ -63,6 +76,13 @@ public class ViewToDoActivity extends AppCompatActivity {
         spinnerStatus.setSelection(Arrays.asList(getResources().getStringArray(R.array.status_list)).indexOf(db.getStatus(name)));
         spinnerStatus.setEnabled(false);
 
+        toDoSpeak = (Button) findViewById(R.id.toDoSpeak);
+        toDoSpeak.setVisibility(View.INVISIBLE);
+
+        notesSpeak = (Button) findViewById(R.id.notesSpeak);
+        notesSpeak.setVisibility(View.INVISIBLE);
+
+
     }
 
     @Override
@@ -89,7 +109,7 @@ public class ViewToDoActivity extends AppCompatActivity {
                 //checkDeleteOnTask = Boolean.TRUE;
                 db.delete(name);
                 Intent resultIntent = new Intent();
-                setResult(MainActivity.RESULT_OK, resultIntent);
+                setResult(RESULT_OK, resultIntent);
                 finish();
                 return true;
             default:

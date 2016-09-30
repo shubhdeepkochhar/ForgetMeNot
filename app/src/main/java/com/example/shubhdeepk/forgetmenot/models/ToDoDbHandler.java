@@ -1,4 +1,4 @@
-package com.example.shubhdeepk.forgetmenot;
+package com.example.shubhdeepk.forgetmenot.models;
 
 import android.content.ContentValues;
 import android.content.Context;
