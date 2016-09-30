@@ -4,7 +4,7 @@
 
 Submitted by: **Shubhdeep Kochhar**
 
-Time spent: **12** hours spent in total
+Time spent: **16** hours spent in total
 
 ## User Stories
 
@@ -21,17 +21,18 @@ The following **optional** features are implemented:
 * [x] Add support for completion due dates for todo items (and display within listview item)
 * [ ] Use a [DialogFragment](http://guides.codepath.com/android/Using-DialogFragment) instead of new Activity for editing items
 * [x] Add support for selecting the priority of each todo item (and display in listview item)
-* [] Tweak the style improving the UI / UX, play with colors, images or backgrounds
+* [x] Tweak the style improving the UI / UX, play with colors, images or backgrounds
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
+* [x] Added Speech input for text
+* [x] Organised source files
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/shubhdeepkochhar/ForgetMeNot/blob/master/test2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/shubhdeepkochhar/ForgetMeNot/blob/master/final.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
