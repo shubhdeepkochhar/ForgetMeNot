@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,12 +51,27 @@ public class CustomToDoAdapter extends BaseAdapter{
     public View getView(final int position, View convertView, ViewGroup parent){
         final View returnView;
         returnView = inflater.inflate(R.layout.list_item,null);
+        LinearLayout layout = (LinearLayout) returnView.findViewById(R.id.itemLayout);
         TextView name = (TextView) returnView.findViewById(R.id.toDoName);
         name.setText(toDoList.get(position));
         TextView status = (TextView) returnView.findViewById(R.id.toDoStatus);
         status.setText(db.getStatus(toDoList.get(position)));
         TextView due = (TextView) returnView.findViewById(R.id.toDoDueDate);
         due.setText(db.getDueDate(toDoList.get(position)));
+        TextView priority = (TextView) returnView.findViewById(R.id.toDoPriority);
+        priority.setText(db.getPriority(toDoList.get(position)));
+        if(priority.getText().toString().matches("Low"))
+            layout.setBackgroundResource(R.drawable.bubble);
+
+        if(priority.getText().toString().matches("Medium"))
+            layout.setBackgroundResource(R.drawable.bubbleyellow);
+
+        if(priority.getText().toString().matches("High"))
+            layout.setBackgroundResource(R.drawable.bubblered);
+
+
+
+
 
         returnView.setOnClickListener(new OnClickListener() {
             @Override
